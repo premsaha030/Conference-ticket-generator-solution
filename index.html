@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Conference ticket generator</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+  <div class="arco"></div>
+  <div class="arco--line">
+    <div class="container">
+      <header class="header">
+        <a href="#" class="header__logo">
+          <img src="assets/images/logo-full.svg" alt="logo">
+        </a>
+      </header>
+      <main class="main main--form">
+  
+        <h1 class="main__title">Your Journey to Coding Conf 2025 Starts Here! </h1>
+        <p class="main__description">Secure your spot at next year's biggest coding conference.</p>
+  
+        <form id="form" class="form">
+          <div class="form__item form__item--upload">
+            <div role="button" class="form__upload">
+              <div class="form__input-border"></div>
+              <div class="form__upload-avatar ">
+  
+                <img class="form__upload-icon" src="assets/images/icon-upload.svg" alt="upload">
+                <img class="form__upload-img" src="" alt="avatar">
+              </div>
+              <div class="form__upload-actions">
+                <button type="button" class="form__upload-button form__upload-remove" id="btn-upload-remove">Remove
+                  image</button>
+                <label role="button" for="file-upload" class="form__upload-label">
+                  <input type="file" accept="jpg,png" id="file-upload" hidden>
+                  <input type="hidden" name="avatar" id="avatar-img" value="">
+                  <span class="form__upload-button">Change</span>
+                </label>
+  
+              </div>
+  
+              <p class="form__upload-text">Drag and drop or click to upload</p>
+            </div>
+            <div class="form__error form__error--upload">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                <path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round"
+                  d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
+                <path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+                <path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round"
+                  d="M8.004 10.462V7.596M8 5.569v-.042" />
+              </svg>
+              <p class="form__upload-message">Upload your photo (JPG or PNG, max size: 500KB).</p>
+  
+            </div>
+          </div>
+          <div class="form__item">
+            <label for="name" class="form__label">Full Name</label>
+            <div class="form__item-content">
+              <input type="text" name="name" class="form__input" placeholder="Full Name">
+              <div class="form__input-border"></div>
+            </div>
+            <div class="form__error">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                <path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round"
+                  d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
+                <path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+                <path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round"
+                  d="M8.004 10.462V7.596M8 5.569v-.042" />
+              </svg>
+              <span>Please enter your full name</span>
+            </div>
+          </div>
+          <div class="form__item">
+            <label for="email" class="form__label">Email Address</label>
+            <div class="form__item-content">
+              <input type="email" name="email" class="form__input" placeholder="Email Address">
+              <div class="form__input-border"></div>
+            </div>
+            <div class="form__error">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                <path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round"
+                  d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
+                <path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+                <path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round"
+                  d="M8.004 10.462V7.596M8 5.569v-.042" />
+              </svg>
+              <span>Please enter a valid email address</span>
+            </div>
+          </div>
+          <div class="form__item">
+            <label for="github" class="form__label">GitHub Username</label>
+            <div class="form__item-content">
+              <input type="text" class="form__input" name="github" placeholder="GitHub Username">
+              <div class="form__input-border"></div>
+            </div>
+            <div class="form__error">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                <path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round"
+                  d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
+                <path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+                <path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round"
+                  d="M8.004 10.462V7.596M8 5.569v-.042" />
+              </svg>
+              <span>Please enter your GitHub username</span>
+            </div>
+          </div>
+          <input type="submit" value="Generate My Ticket" class="form__submit">
+        </form>
+  
+        <div class="ticket">
+          <div class="ticket__left">
+            <header class="ticket__header">
+              <div class="ticket__header-left">
+                <img class="ticket__logo" src="assets/images/logo-mark.svg" alt="logo">
+              </div>
+              <div class="ticket__header-right">
+                <h3 class="ticket__title">Coding Conf</h3>
+                <span class="ticket__date">Jan 31, 2025 / Austin, TX</span>
+              </div>
+            </header>
+            <footer class="ticket__footer">
+              <img class="ticket__avatar" src="assets/images/image-avatar.jpg" id="avatar" alt="avatar">
+              <div class="ticket__footer-content">
+                <h3 class="ticket__name" id="name">Jonathan Doe</h3>
+                <div class="ticket__social">
+                  <img class="ticket__icon" src="assets/images/icon-github.svg" alt="github">
+                  <span class="ticket__github" id="github">@yourusername</span>
+                </div>
+              </div>
+            </footer>
+          </div>
+          <div class="ticket__right">
+            <span class="ticket__number">Ticket #</span>
+          </div>
+        </div>
+  
+      </main>
+  
+    </div>
+  </div>
+</body>
+<script src="app.js"></script>
+
+</html>

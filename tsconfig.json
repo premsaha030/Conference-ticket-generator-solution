@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "outDir": ".",
+    "rootDir": ".",
+    "declaration": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "target": "es6",
+    "lib": [
+      "ES2020",
+      "DOM",
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
